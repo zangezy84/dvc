@@ -4,9 +4,9 @@ from torchvision.utils import make_grid, save_image
 from torchvision import transforms
 from torchvision.datasets import CIFAR10
 import wandb
-from modeling.diffusion import DiffusionModel
-from modeling.training import generate_samples, train_epoch
-from modeling.unet import UnetModel
+from diffusion import DiffusionModel
+from training import generate_samples, train_epoch
+from unet import UnetModel
 import tqdm
 from tqdm import trange
 from hparams import config
