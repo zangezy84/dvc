@@ -1,0 +1,18 @@
+stages:
+  prepare_data:
+    cmd: python prepare_data.py
+    deps:
+    - prepare_data.py
+    outs:
+    - CIFAR10
+  train:
+    cmd: python main.py
+    deps:
+    - CIFAR10
+    - hparams.py
+    - unet.py
+    - diffusion.py
+    - training.py
+    - main.py
+    outs:
+    - model.pt
